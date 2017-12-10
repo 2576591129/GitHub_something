@@ -1,0 +1,24 @@
+以下内容是在自己的代码库进行下载与上传,需要下载其他人的代码,使用命令:   git clone 网址
+
+1. 下载 Git for Windows : https://git-for-windows.github.io/
+2. 在你想要下载代码的文件夹下, 鼠标右键,点击 Git Bash Here, 会弹出一个小的命令号窗口
+3. git init   (初始化git,你会发现本地多了一个文件夹,复制不是 ctrl v , 是按鼠标滚轮)
+4. git remote add origin  https://github.com/2576591129/MFC_Windows.git    (将本地文件夹与仓库绑定,最后面的地址是要下载或者上传的代码的地址)
+5. git pull origin master    (将你的要下载的文件拷贝到本地, 你会发现本地文件夹下多了你要下载的东西)
+   修改完文件之后:
+6. git add .   (添加所有修改的内容)
+7. git commit -m "fengtiancheng"     (提交修改的内容,双引号中的内容是你修改的备注)
+8. git push origin master   (上传修改的内容,在github上就能看见被修改了)
+
+
+切换分支:
+当你去pull其他组员的代码时,修改完毕之后再上传,会把原来的代码覆盖了,这时候就需要切一个分支,把自己要修改的内容与原来的版本分开,
+适用于并行开发(简单说,就是多一个原来的副本)以下是详细过程:
+上面的步骤执行到第5步之后,这时候你如果想切分支,则:
+1. git branch jucheng   (后面的 jucheng 是你想要起的名字)
+   修改完文件之后,同样:
+2. git add .   (添加所有修改的内容)
+3. git commit -m "fengtiancheng"     (提交修改的内容)
+4. git push origin jucheng	(这里和原来的不同,最后一个单词要换成你分支的名字,这时候你发现github上,该项目已经多了一个分支了)
+5. git checkout master   	(切换回主分支)
+
